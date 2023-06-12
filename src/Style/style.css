@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/*  Navbar component */
+.navHeader {
+  width: 100%;
+  height: 10vh;
+  box-shadow: 5px 5px 10px 5px rgba(50, 45, 45, 0.4);
+}
+
+.sideBar {
+  display: none;
+}
+.nav-menu li a:hover {
+  color: orange;
+  border-bottom: 2px solid orange;
+  font-weight: bold;
+  padding-bottom: 4px;
+  transition: 0.2s ease-in;
+}
+
+@media screen and (max-width: 1040px) {
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 4rem;
+    right: 100%;
+    transition: 0.5s ease-in;
+    background-color: #000;
+  }
+  .nav-menu.active {
+    right: 0;
+  }
+  .nav-menu li {
+    padding: 1rem 0;
+    border-bottom: 1px solid orange;
+  }
+  .nav-menu li a {
+    font-size: 1.5rem;
+  }
+  .sideBar {
+    display: initial;
+  }
+}
+
+/* Login and logout */
+
+.logButtons {
+  background-color: orange;
+  width: 4rem;
+  padding: 0.5rem;
+  border-radius: 3px;
+  transform: translateY(-0.5rem);
+}
+.logButtons:hover {
+  width: 4.3rem;
+  background-color: transparent;
+  border: 1px solid orange;
+  transition: 0.3s ease-in;
+}
+
+/*
+ Hero Page  
+*/
+
+.hero {
+  width: 100%;
+  height: 100vh;
+}
+.mask {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.mask::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.8;
+}
+.hero .content {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  text-align: center;
+}
+.into-img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+}
+#heroBtn1:hover {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid orange;
+  transition: 0.5s ease;
+}
+#heroBtn2 {
+  color: #fff;
+}
+#heroBtn2:hover {
+  transition: 0.5s ease;
+  border: 1px solid orange;
+}
+
+/*  Project Page Section */
+
+.projectHero {
+  width: 100%;
+  height: 70vh;
+  background-image: url(../assets/projectHero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 12rem;
+  text-align: center;
+}
+
+#contentSection {
+  margin-top: 4rem;
+  padding-bottom: 4rem;
+}
+.card {
+  box-shadow: 5px 5px 10px 5px rgba(50, 45, 45, 0.4);
+}
+
+/* About Section */
+
+.aboutContainer {
+  height: 100vh;
+  margin-top: 5rem;
+}
+.aboutImg {
+  width: 55%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 40%;
+  box-shadow: 5px 5px 10px 5px rgba(50, 45, 45, 0.4);
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  order: 1;
+}
+.right {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  order: 2;
+}
+
+@media screen and (max-width: 768px) {
+  .left {
+    order: 2;
+    margin-bottom: 5rem;
+  }
+  .right {
+    order: 1;
+  }
+  .aboutImg {
+    width: 40%;
+    height: 60%;
+  }
+}
+
+/* Contact Page */
+.contactPage {
+  margin-top: 10rem;
+  height: 100%;
+}
+.contactPage input:hover {
+  outline: 1px solid orange;
+  transition: 0.3s ease-in;
+}
+.contactPage textarea:hover {
+  outline: 1px solid orange;
+  transition: 0.3s ease-in;
+}
+.contactPage h2 {
+  text-align: center;
+}
+.contactImg {
+  width: 60%;
+  height: 80%;
+  object-fit: fill;
+  box-shadow: 5px 5px 10px 5px rgba(50, 45, 45, 0.4);
+  border-radius: 10%;
+}
+#left {
+  order: 1;
+  margin-bottom: 3rem;
+}
+#right {
+  display: flex;
+  justify-content: center;
+  order: 2;
+}
+
+@media screen and (max-width: 768px) {
+  #left {
+    order: 2;
+    margin-bottom: 5rem;
+  }
+  #right {
+    order: 1;
+  }
+  .contactImg {
+    width: 50%;
+    height: 60%;
+  }
+}
